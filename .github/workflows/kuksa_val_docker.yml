@@ -2,9 +2,9 @@ name: kuksa_val_docker
 
 on:
   push:
-    branches: [ master ]
+    #branches: [ master ]
   pull_request:
-    branches: [ master ]
+    #branches: [ master ]
     paths:
     - ".github/workflows/kuksa_val_docker.yml"
     - "kuksa-val-server/**"
