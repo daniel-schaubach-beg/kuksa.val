@@ -1,14 +1,6 @@
 name: kuksa_val_unittests
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-    paths:
-    - ".github/workflows/kuksa_val_unittest.yml"
-    - "kuksa-val-server/**"
-    - "kuksa_certificates/**"
   workflow_dispatch:
 
 concurrency:

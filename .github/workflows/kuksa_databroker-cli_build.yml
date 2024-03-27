@@ -13,16 +13,7 @@
 
 name: kuksa_databroker-cli_build
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    paths:
-      - ".github/workflows/kuksa_databroker-cli_build.yml"
-      - "kuksa_databroker/**"
-      - "proto/**"
-      - "Cargo.*"
-      - "Cross.toml"
+on:  
   workflow_call:
   workflow_dispatch:
 

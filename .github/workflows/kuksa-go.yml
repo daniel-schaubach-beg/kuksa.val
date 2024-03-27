@@ -14,14 +14,6 @@
 name: kuksa_go_client
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-    paths:
-    - ".github/workflows/kuksa-go.yml"
-    - "kuksa_go_client/**"
-    - "proto/**"
   workflow_dispatch:
 
 concurrency:
