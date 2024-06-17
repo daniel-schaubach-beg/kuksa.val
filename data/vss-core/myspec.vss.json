@@ -23,6 +23,17 @@
                         "datatype": "boolean"
                       }
                     }
+                  },
+				  "High": {
+                    "description": "High Beam signals",
+                    "type": "branch",
+                    "children": {
+                      "IsOn": {
+                        "description": "Turn High Beam on or off",
+                        "type": "actuator",
+                        "datatype": "boolean"
+                      }
+                    }
                   }
                 }
               }
