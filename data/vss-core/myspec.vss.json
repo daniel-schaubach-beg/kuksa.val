@@ -1,45 +1,692 @@
 {
   "Vehicle": {
     "children": {
-      "Body": {
-        "description": "Body signals.",
-        "type": "branch",
+      "BEG": {
         "children": {
           "Lights": {
-            "description": "Light signals",
-            "type": "branch",
             "children": {
-              "Beam": {
-                "description": "Beam signals",
-                "type": "branch",
+              "All": {
                 "children": {
-                  "Low": {
-                    "description": "Low Beam signals",
-                    "type": "branch",
-                    "children": {
-                      "IsOn": {
-                        "description": "Turn Low Beam on or off",
-                        "type": "actuator",
-                        "datatype": "boolean"
-                      }
-                    }
+                  "IsDefect": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                    "type": "sensor"
                   },
-				  "High": {
-                    "description": "High Beam signals",
-                    "type": "branch",
-                    "children": {
-                      "IsOn": {
-                        "description": "Turn High Beam on or off",
-                        "type": "actuator",
-                        "datatype": "boolean"
-                      }
-                    }
+                  "IsOn": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is on or off. True = On. False = Off.",
+                    "type": "actuator"
                   }
-                }
+                },
+                "description": "All lights to control.",
+                "type": "branch"
+              },
+              "Backup": {
+                "children": {
+                  "BackupLeft": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Backup left light",
+                    "type": "branch"
+                  },
+                  "BackupRight": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Backup right light",
+                    "type": "branch"
+                  },
+                  "IsDefect": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                    "type": "sensor"
+                  },
+                  "IsOn": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is on or off. True = On. False = Off.",
+                    "type": "actuator"
+                  }
+                },
+                "description": "Backup lights to control.",
+                "type": "branch"
+              },
+              "Beam": {
+                "children": {
+                  "HighBeam": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "High beam light",
+                    "type": "branch"
+                  },
+                  "HighBeamLeft": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "High beam left light",
+                    "type": "branch"
+                  },
+                  "HighBeamRight": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "High beam right light",
+                    "type": "branch"
+                  },
+                  "IsDefect": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                    "type": "sensor"
+                  },
+                  "IsOn": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is on or off. True = On. False = Off.",
+                    "type": "actuator"
+                  },
+                  "LowBeam": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Low beam light",
+                    "type": "branch"
+                  },
+                  "LowBeamLeft": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Low beam left light",
+                    "type": "branch"
+                  },
+                  "LowBeamRight": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Low beam right light",
+                    "type": "branch"
+                  }
+                },
+                "description": "Beam lights to control.",
+                "type": "branch"
+              },
+              "Brake": {
+                "children": {
+                  "BrakeLeft": {
+                    "children": {
+                      "IsActive": {
+                        "allowed": ["INACTIVE", "ACTIVE", "ADAPTIVE"],
+                        "datatype": "string",
+                        "description": "Indicates if break-light is active. INACTIVE means lights are off. ACTIVE means lights are on. ADAPTIVE means that break-light is indicating emergency-breaking.",
+                        "type": "actuator"
+                      },
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      }
+                    },
+                    "description": "Brake left light",
+                    "type": "branch"
+                  },
+                  "BrakeRight": {
+                    "children": {
+                      "IsActive": {
+                        "allowed": ["INACTIVE", "ACTIVE", "ADAPTIVE"],
+                        "datatype": "string",
+                        "description": "Indicates if break-light is active. INACTIVE means lights are off. ACTIVE means lights are on. ADAPTIVE means that break-light is indicating emergency-breaking.",
+                        "type": "actuator"
+                      },
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      }
+                    },
+                    "description": "Brake right light",
+                    "type": "branch"
+                  },
+                  "IsActive": {
+                    "allowed": ["INACTIVE", "ACTIVE", "ADAPTIVE"],
+                    "datatype": "string",
+                    "description": "Indicates if break-light is active. INACTIVE means lights are off. ACTIVE means lights are on. ADAPTIVE means that break-light is indicating emergency-breaking.",
+                    "type": "actuator"
+                  },
+                  "IsDefect": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                    "type": "sensor"
+                  }
+                },
+                "description": "Brake lights to control.",
+                "type": "branch"
+              },
+              "DirectionIndicator": {
+                "children": {
+                  "DirectionIndicatorFront": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsSignaling": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is signaling or off. True = signaling. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Direction indicator front light",
+                    "type": "branch"
+                  },
+                  "DirectionIndicatorFrontLeft": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsSignaling": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is signaling or off. True = signaling. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Direction indicator front left light",
+                    "type": "branch"
+                  },
+                  "DirectionIndicatorFrontRight": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsSignaling": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is signaling or off. True = signaling. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Direction indicator front right light",
+                    "type": "branch"
+                  },
+                  "DirectionIndicatorRear": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsSignaling": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is signaling or off. True = signaling. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Direction indicator rear light",
+                    "type": "branch"
+                  },
+                  "DirectionIndicatorRearLeft": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsSignaling": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is signaling or off. True = signaling. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Direction indicator rear left light",
+                    "type": "branch"
+                  },
+                  "DirectionIndicatorRearRight": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsSignaling": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is signaling or off. True = signaling. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Direction indicator rear right light",
+                    "type": "branch"
+                  },
+                  "IsDefect": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                    "type": "sensor"
+                  },
+                  "IsSignaling": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is signaling or off. True = signaling. False = Off.",
+                    "type": "actuator"
+                  }
+                },
+                "description": "Direction indicator lights to control.",
+                "type": "branch"
+              },
+              "Fog": {
+                "children": {
+                  "FogFront": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Fog front light",
+                    "type": "branch"
+                  },
+                  "FogRear": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Fog rear light",
+                    "type": "branch"
+                  },
+                  "IsDefect": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                    "type": "sensor"
+                  },
+                  "IsOn": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is on or off. True = On. False = Off.",
+                    "type": "actuator"
+                  }
+                },
+                "description": "Fog lights to control.",
+                "type": "branch"
+              },
+              "Hazard": {
+                "children": {
+                  "IsDefect": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                    "type": "sensor"
+                  },
+                  "IsSignaling": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is signaling or off. True = signaling. False = Off.",
+                    "type": "actuator"
+                  }
+                },
+                "description": "Hazard lights to control.",
+                "type": "branch"
+              },
+              "LicensePlate": {
+                "children": {
+                  "IsDefect": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                    "type": "sensor"
+                  },
+                  "IsOn": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is on or off. True = On. False = Off.",
+                    "type": "actuator"
+                  },
+                  "LicensePlateFront": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "License plate front light",
+                    "type": "branch"
+                  },
+                  "LicensePlateRear": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "License plate rear light",
+                    "type": "branch"
+                  }
+                },
+                "description": "License plate lights to control.",
+                "type": "branch"
+              },
+              "Parking": {
+                "children": {
+                  "IsDefect": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                    "type": "sensor"
+                  },
+                  "IsOn": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is on or off. True = On. False = Off.",
+                    "type": "actuator"
+                  },
+                  "ParkingFront": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Parking front light",
+                    "type": "branch"
+                  },
+                  "ParkingFrontLeft": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Parking front left light",
+                    "type": "branch"
+                  },
+                  "ParkingFrontRight": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Parking front right light",
+                    "type": "branch"
+                  },
+                  "ParkingRear": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Parking rear light",
+                    "type": "branch"
+                  },
+                  "ParkingRearLeft": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Parking rear left light",
+                    "type": "branch"
+                  },
+                  "ParkingRearRight": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Parking rear right light",
+                    "type": "branch"
+                  }
+                },
+                "description": "Parking lights to control.",
+                "type": "branch"
+              },
+              "Running": {
+                "children": {
+                  "IsDefect": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                    "type": "sensor"
+                  },
+                  "IsOn": {
+                    "datatype": "boolean",
+                    "description": "Indicates if light is on or off. True = On. False = Off.",
+                    "type": "actuator"
+                  },
+                  "RunningFront": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Running front light",
+                    "type": "branch"
+                  },
+                  "RunningFrontLeft": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Running front left light",
+                    "type": "branch"
+                  },
+                  "RunningFrontRight": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Running front right light",
+                    "type": "branch"
+                  },
+                  "RunningRear": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Running rear light",
+                    "type": "branch"
+                  },
+                  "RunningRearLeft": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Running rear left light",
+                    "type": "branch"
+                  },
+                  "RunningRearRight": {
+                    "children": {
+                      "IsDefect": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is defect. True = Light is defect. False = Light has no defect.",
+                        "type": "sensor"
+                      },
+                      "IsOn": {
+                        "datatype": "boolean",
+                        "description": "Indicates if light is on or off. True = On. False = Off.",
+                        "type": "actuator"
+                      }
+                    },
+                    "description": "Running rear right light",
+                    "type": "branch"
+                  }
+                },
+                "description": "Running lights to control.",
+                "type": "branch"
               }
-            }
+            },
+            "description": "Exterior lights.",
+            "type": "branch"
           }
-        }
+        },
+        "description": "All body components specific to BEG Demo Car.",
+        "type": "branch"
       },
       "Immobilizer": {
         "children": {
