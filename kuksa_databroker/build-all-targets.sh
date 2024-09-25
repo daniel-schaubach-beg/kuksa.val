@@ -24,6 +24,7 @@ cd ..
 # Starting a fresh build
 echo "Cargo clean, to start fresh..."
 cargo clean
+cargo update
 rm -rf ../dist || true
 mkdir ../dist
 
